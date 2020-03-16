@@ -1,28 +1,17 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="grid">
+    <section>Список торговых пар (обновляется онлайн)</section>
+    <section>Список котировок (обновляется онлайн)</section>
+    <section>Форма создания ордера</section>
+    <section>История ордеров</section>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue';
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-};
-</script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
 }
 </style>
