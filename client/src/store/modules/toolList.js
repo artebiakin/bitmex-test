@@ -41,7 +41,7 @@ const toolList = {
         websocket.onerror = (event) => reject(event);
         websocket.onmessage = (event) => {
           const data = JSON.parse(event.data);
-          if (data.action == 'insert') commit('updateData', data.data[0]);
+          if (data.action == 'update') commit('updateData', data.data[0]);
         };
       });
     },
